@@ -1,0 +1,72 @@
+/* Basic styling for the image gallery */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+.content{
+    background-color: #3498DB;
+}
+
+.image-gallery {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+}
+.thumbnails {
+    display: flex;
+}
+
+.thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #FF5733;
+}
+
+.thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    display: grid;
+}
+
+.slideshow {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #3498DB;
+}
+
+.slideshow img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+/* Styling for the active slide */
+.slideshow img.active {
+    display: block;
+}
+
+/* Custom CSS for the slideshow transitions */
+.slideshow img {
+    animation: fade 3s infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
